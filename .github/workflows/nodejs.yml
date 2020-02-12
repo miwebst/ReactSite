@@ -22,7 +22,7 @@ jobs:
         npm run build
     - uses: BrandonHopcraft/anotherdeploy@master
       with:
-        azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN }}
+        azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_VICTORIOUS_PEBBLE_1F48462E }}
         action: 'upload --verbose'         
         app_artifact_location: 'app/build'
         api_artifact_location: 'api'
@@ -34,5 +34,5 @@ jobs:
     steps:
     - uses: BrandonHopcraft/anotherdeploy@master
       with:
-        azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN }}
+        azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_VICTORIOUS_PEBBLE_1F48462E }}
         action: 'close'
