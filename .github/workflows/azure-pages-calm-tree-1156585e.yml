@@ -22,7 +22,7 @@ jobs:
       with:
         azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN_CALM_TREE_1156585E }}
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        action: 'upload'
+        action: 'upload --verbose'
         app_location: 'app' # App Source Code Path
         api_location: 'api' # Api Source Code Path - optional
         app_artifact_location: 'build' # Built App Content Directory - optional
