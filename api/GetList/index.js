@@ -4,7 +4,7 @@ function getUserInfo(req){
         return null;
     }
 
-    // test comment 2
+    // test comment 3
     const buffer = Buffer.from(req.headers[clientPrincipalHeader], 'base64');
     const serializedJson = buffer.toString('ascii');
     return JSON.parse(serializedJson);
