@@ -13,6 +13,11 @@
       "allowedRoles": ["authenticated"]
     },
     {
+      "route": "/redirects/*",
+      "serve": "/redirectTarget"
+      "statusCode": 302
+    },
+    {
       "route": "/*", 
       "serve": "/index.html", 
       "statusCode": 200 
