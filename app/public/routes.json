@@ -14,7 +14,7 @@
     },
     {
       "route": "/redirects/*",
-      "serve": "/redirectTarget"
+      "serve": "/redirectTarget",
       "statusCode": 302
     },
     {
