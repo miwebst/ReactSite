@@ -1,1 +1,23 @@
-{}
+{
+  "routes": [],
+  "platformErrorOverrides": [],
+  "mimeTypes": {
+    ".appx": "application/appx",
+    "json": "application/json"
+  },
+  "headersByPath": [
+    {
+      "path": "/restricted/*",
+      "headers": {
+        "x-ms-client": "random",
+        "cache-control": "max-age 30000; must-revlidate"
+      }
+    },
+    {
+      "path": "/*",
+      "headers": {
+        "Feature-Policy": "accelerometer 'none'; camera 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'self'; payment 'none'; usb 'none'"
+      }
+    }
+  ]
+}
