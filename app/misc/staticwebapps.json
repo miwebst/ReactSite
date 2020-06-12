@@ -1,6 +1,35 @@
 {
-  "routes": [],
-  "platformErrorOverrides": [],
+  "routes": [
+    {
+      "route": "/login",
+      "serve": "/.auth/login/github"
+    },
+    {
+      "route": "/logout",
+      "serve": "/.auth/logout"
+    },
+    {
+      "route": "/api/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/redirects/*",
+      "serve": "/redirectTarget",
+      "statusCode": 302
+    },
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
+    }
+  ],
+  "platformErrorOverrides": [
+    {
+      "errorType": "NotFound",
+      "serve": "/notFound.html",
+      "statusCode": 404
+    }
+  ],
   "mimeTypes": {
     ".appx": "application/appx",
     "json": "application/json"
