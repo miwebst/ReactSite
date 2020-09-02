@@ -18,7 +18,7 @@ class FetchDemo extends React.Component {
       axios.get(`/api/${this.props.subreddit}`)
         .then(res => {
           console.log(res.data);
-          var userName = 'Hey ' + res.data.userDetails + '!';
+          var userName = 'Hello ' + res.data.userDetails + '!';
           this.setState({userName});
         });
     }
